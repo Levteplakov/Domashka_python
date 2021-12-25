@@ -1,0 +1,81 @@
+A=int(input('Введите номер задания: ', ))
+if A==1:
+    k=int(input('Введите количество яблок: '))
+    n=int(input('Введите количество шкильников: '))
+    f=k//n
+    d=k%n
+    print ('Каждому школьнику достанется яблок: ', f)
+    print ('В корзине останется яблок: ', d)
+elif A==2:
+    n=int(input('Введите n:', ))
+    a=n//60
+    b=n%60
+    if a<24:
+        print ('Время: ', a ,'час(ов) и', b ,'минут(ы)')
+    elif a>=24:
+        print ('Время: ', a-24, 'час(ов) и', b,'минут(ы)')
+elif A==3:
+    n=int(input('Введитe натуральное число: ', ))
+    if n%4==0 and n%100!=0 or n%400==0:
+        print ('YEAH')
+    else:
+        print ('NO')
+elif A==4:
+    print('Введите три числа через ENTER: ')
+    a=int(input())
+    b=int(input())
+    c=int(input())
+    print ('Выберите способ (1 или 2): ')
+    s=int(input())
+    if s==1:
+        M=[a, b, c]
+        for i in range (len(M)):
+            if M[i]<=a:
+                a=M[i]
+        print ('Наименьшее: ',a)
+    #ЕСТЬ ДРУГОЙ СПОСОБ:
+    elif s==2:
+        m=min(a,b,c)
+        print ('Наименьшее: ',m)
+elif A==5:
+    print ('Введите через ENTER координаты двух клеток: ')
+    x1 = int(input())
+    y1 = int(input())
+    x2 = int(input())
+    y2 = int(input())
+    if (x1 + y1 + x2 + y2) % 2 == 0:
+        print('YES')
+    else:
+        print('NO')
+elif A==6:
+    print ('Введите через ENTER координаты двух клеток: ')
+    x1 = int(input())
+    y1 = int(input())
+    x2 = int(input())
+    y2 = int(input())
+    if x1==x2 or y1==y2:
+        print ('YES')
+    else:
+        print ('NOPE')
+elif A==7:
+    print ('Введите через ENTER координаты двух клеток: ')
+    x1 = int(input())
+    y1 = int(input())
+    x2 = int(input())
+    y2 = int(input())
+    dx = abs(x1 - x2)
+    dy = abs(y1 - y2)
+    if dx == 1 and dy == 2 or dx == 2 and dy == 1:
+        print('YES')
+    else:
+        print('NO')
+elif A==8:
+    print ('Введите параметры бассейна и положения Яши: ')
+    n = int(input('N = '))
+    m = int(input('M = '))
+    x = int(input('x = '))
+    y = int(input('y = '))
+    a = min(x,y)
+    b = min(m-x,n-y)
+    c = min(a,b)
+    print ('Минимальное расстояние: ', c)
